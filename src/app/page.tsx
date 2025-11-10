@@ -1,29 +1,31 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="bg-white">
-      {/* Primera sección: Imagen + texto */}
+
       <section className="flex items-center justify-center py-20 bg-black">
         <div className="flex max-w-5xl rounded-2xl overflow-hidden">
           <div className="w-1/2">
             <img
               src="/my photo.jpg"
               alt="Imagen principal"
-              className="w-[400px] h-[300px] object-cover rounded-xl"
+              className="h-[550px] w-auto rounded-xl"
             />
           </div>
 
           <div className="w-1/2 p-10 flex flex-col justify-center">
-            <h1 className="text-4xl font-bold mb-4 text-white">My Portfolio</h1>
+            <h1 className="text-6xl font-bold mb-4 text-white">My Portfolio</h1>
             <p className="text-gray-300 text-lg">
               Welcome to my academic portfolio. Here, I share the projects, lessons, 
               and experiences that reflect my growth as a student. Each work represents 
               my commitment to learning, creating, and contributing ideas with purpose.
             </p>
+            <p className="text-gray-200 text-xl font-semibold mt-6">Let’s explore now</p>
           </div>
         </div>
       </section>
 
-      {/* Segunda sección: 3 fotos + textos */}
       <section className="w-full bg-black text-white py-16 px-10">
         <div className="flex justify-center gap-6 mb-12">
           <img
@@ -43,15 +45,19 @@ export default function Home() {
           />
         </div>
 
-        <div className="flex justify-between max-w-6xl mx-auto">
-          <div className="w-1/2 pr-8">
+        <div className="flex justify-between items-start max-w-6xl mx-auto text-white py-10">
+          <div className="w-1/3 pr-5">
+            <h2 className="text-4xl font-bold mb-3">About me</h2>
+          </div>
+
+          <div className="w-1/3 px-6">
             <h2 className="text-2xl font-bold mb-3">My vision</h2>
             <p className="text-gray-300">
               My vision is to become a Marketing leader in a good company. I want to share creative and honest ideas that make a positive change in people’s lives and in society.
             </p>
           </div>
 
-          <div className="w-1/2 pl-8">
+          <div className="w-1/3 pl-6">
             <h2 className="text-2xl font-bold mb-3">My mission</h2>
             <p className="text-gray-300">
               My mission is to study Marketing to help brands connect with people in a real and positive way. I want to learn with responsibility, innovation, and perseverance, and inspire others to see things in a new way.
@@ -60,7 +66,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Tercera parte: 3 proyectos */}
       <main className="bg-black text-white">
         <section className="flex justify-center items-center gap-10 py-20 bg-black">
           <div>
@@ -81,6 +86,11 @@ export default function Home() {
             <p className="text-gray-300 max-w-md">
               PAYOF is a safe and trusted payment app that helps you organize your money. It lets you track income, expenses, and investments with clarity and security.
             </p>
+            <Link href="https://www.figma.com/design/MF3LLRFcjSRr3aBLmnaM8p/PAYOF-2.0--Copy-?node-id=0-1&t=C9lQXWbZIT0Iqd5S-1">
+              <button className="border border-white text-white font-semibold py-1 px-2 rounded-xl hover:bg-white hover:text-black transition duration-300 mt-4">
+              Take a look
+              </button>
+            </Link>
           </div>
         </section>
 
@@ -103,6 +113,11 @@ export default function Home() {
             <p className="text-gray-300 max-w-md">
               DINAtours is a website that organizes tourist destinations by department, showing photos, locations, and available tours. It also includes a transport system where local drivers can register and offer their services, making it easier for tourists to reach each destination.
             </p>
+            <Link href="https://dinatours.vercel.app/">
+              <button className="border border-white text-white font-semibold py-1 px-2 rounded-xl hover:bg-white hover:text-black transition duration-300 mt-4">
+              Take a look
+              </button>
+            </Link>
           </div>
         </section>
 
@@ -125,6 +140,11 @@ export default function Home() {
             <p className="text-gray-300 max-w-md">
               Dexpert is an inclusive platform that connects young people with no work experience to micro and small businesses, allowing them to participate in real projects, gain practice, develop skills, and strengthen their professional profile.
             </p>
+            <Link href="https://dexpert-lake.vercel.app/">
+              <button className="border border-white text-white font-semibold py-1 px-2 rounded-xl hover:bg-white hover:text-black transition duration-300 mt-4">
+              Take a look
+              </button>
+            </Link>
           </div>
         </section>
 
@@ -133,7 +153,7 @@ export default function Home() {
             <img
               src="/image (4).png"
               alt="Foto de contacto"
-              className="w-[500px] h-[350px] object-cover rounded-xl"
+              className="h-[550px] w-auto rounded-xl"
             />
           </div>
 
@@ -144,7 +164,13 @@ export default function Home() {
             <h2 className="text-2xl font-bold mb-2">My contact</h2>
             <p className="text-blue-400 hover:underline mb-2">
             </p>
-            <p className="text-gray-300">LinkedIn: Itzel Anahi Lino</p>
+            <Link
+              href="https://www.linkedin.com/in/itzel-anah%C3%AD-lino-096136368/" 
+              target="_blank" 
+              className="text-blue-400 hover:underline mt-2"
+              >
+                LinkedIn: Itzel Anahi Lino
+              </Link>
             <p className="text-gray-300">Email: itzelino.tovar@gmail.com</p>
           </div>
         </section>
